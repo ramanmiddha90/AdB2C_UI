@@ -41,10 +41,12 @@
                 $("#operationType").val("B");
              
             }
-            var element= document.getElementById("cancelOperation");
-            element.addEventListener('click', function () {
-                $("#continue").click();
-            });
+            var element = document.getElementById("cancelOperation");
+            if (element != null && element != undefined) {
+                element.addEventListener('click', function () {
+                    $("#continue").click();
+                });
+            }
         };
         var applyCSS = function () {
             var version = GetParameterValues('Version');
