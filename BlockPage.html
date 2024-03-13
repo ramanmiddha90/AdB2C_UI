@@ -37,11 +37,12 @@
 
 
         var handleCancel = function () {
-            $("#cancelOperation").on("click", function () {
-                alert("dd");
+            function myFunction() {
                 $("#operationType").val("B");
                 $("#continue").click();
-            });
+            }
+            var element= document.getElementById("cancelOperation");
+            element.addEventListener('click', myFunction);
         };
         var applyCSS = function () {
             var version = GetParameterValues('Version');
