@@ -38,12 +38,13 @@
 
         var handleCancel = function () {
             function myFunction() {
-                $("#operationType").val("B");
+              
              
             }
             var element = document.getElementById("cancelOperation");
             if (element != null && element != undefined) {
                 element.addEventListener('click', function () {
+                    $("#operationType").val("B");
                     $("#continue").click();
                 });
             }
