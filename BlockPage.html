@@ -39,10 +39,12 @@
         var handleCancel = function () {
             function myFunction() {
                 $("#operationType").val("B");
-                $("#continue").click();
+             
             }
             var element= document.getElementById("cancelOperation");
-            element.addEventListener('click', myFunction);
+            element.addEventListener('click', function () {
+                $("#continue").click();
+                );
         };
         var applyCSS = function () {
             var version = GetParameterValues('Version');
