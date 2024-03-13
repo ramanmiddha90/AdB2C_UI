@@ -36,7 +36,12 @@
         };
 
 
-
+        var handleCancel = function () {
+            $("#cancelOperation").on("click", function () {
+                $("#operationType").val("B");
+                $("#continue").click();
+            });
+        };
         var applyCSS = function () {
             var version = GetParameterValues('Version');
 
@@ -101,6 +106,7 @@
         (function onPageReady() {
             if (window.pageReady) {
                 applyCSS();
+                handleCancel();
                 /*  fillDDSolar();*/
             }
             var intervalHandle = setInterval(
